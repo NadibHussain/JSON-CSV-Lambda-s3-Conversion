@@ -1,0 +1,13 @@
+{
+  "fileLocations": [
+    {
+      "URIs": ["s3://YourBucketName/Path/ToYourfile.csv"]
+    }
+  ],
+  "globalUploadSettings": {
+    "format": "CSV",
+    "delimiter": ";",
+    "textqualifier": "\"",
+    "containsHeader": "true"
+  }
+}
