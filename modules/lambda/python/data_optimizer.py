@@ -12,7 +12,7 @@ def lambda_handler(event, context):
     timestamp = dt.datetime.now().strftime("%s")
     
     filename_csv = "/tmp/file_{ts}.csv".format(ts=timestamp)
-    keyname_s3 = "uploads/quicksight.json".format(ds=datestamp, ts=timestamp)
+    keyname_s3 = "uploads/quicksight.csv".format(ds=datestamp, ts=timestamp)
     
     for record in event['Records']:
         bucket_name = record['s3']['bucket']['name']
@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     data = s3_object['Body'].read()
     contents = data.decode('utf-8')
     
-    data = json.load(contents)
+    data = json.loads(contents)
     data_file = open(filename_csv, 'w')
     csv_writer = csv.writer(data_file)
     count = 0
