@@ -1,6 +1,8 @@
 # JSON-CSV-Lambda-s3-Conversion
 This is terraform-based infrastructure as a code where JSON is converted to CSV and displayed in Quicksight
 
+## Architecture
+![terraform drawio (1)](https://github.com/NadibHussain/JSON-CSV-Lambda-s3-Conversion/assets/44313607/632421a3-a65d-48a9-9cf3-38cf5a42d29a)
 
 
 ## Features
